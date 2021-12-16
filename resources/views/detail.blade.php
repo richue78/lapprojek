@@ -22,7 +22,7 @@
   <div class="container">
     <div class="d-flex ">
         <div class="col-8">
-            <h4 class = "col-12 bg-primary"> Chapter List</h4>
+            <h4 class = "col-12 bg-primary text-white"> Chapter List</h4>
             <table class="table table-light">
                 <thead>
                   <tr>

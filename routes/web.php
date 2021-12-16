@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\bookdetail;
 use App\Http\Controllers\chapterView;
+use App\Http\Controllers\Dashboard;
 use App\Http\Controllers\homeview;
 use App\Http\Controllers\LoginControler;
 use App\Http\Controllers\RegisterControler;
@@ -22,9 +23,10 @@ Route::get('/',[homeview::class,'index']);
 
 route::get('/detail/{id}',[bookdetail::class,'viewbook']);
 route::get('/chapterview/{id}',[chapterView::class,'viewchapter']);
-
-Route::get('/login',[LoginControler::class,'index']);
+route::get('/dashboard',[Dashboard::class,'index'])->middleware('auth');
+Route::get('/login',[LoginControler::class,'index'])->name('login')->middleware('guest');
 Route::post('/login',[LoginControler::class,'autenticate']);
+Route::post('/logout',[LoginControler::class,'logout']);
 
 Route::get('/About', function () {
     return view('About',[
@@ -34,5 +36,5 @@ Route::get('/About', function () {
 });
 
 
-Route::get('/register',[RegisterControler::class,'index']);
+Route::get('/register',[RegisterControler::class,'index'])->middleware('guest');;
 Route::post('/register',[RegisterControler::class,'store']);
