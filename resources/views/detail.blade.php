@@ -39,7 +39,7 @@
                     @foreach ($chapters as $c)
                     <tr>
                         <td>
-                          <a href="/chapterview/{{ $c->id }}">{{$c->ChapterName}}</a>
+                          <a class="text-decoration-none" href="/chapterview/{{ $c->id }}">{{$c->ChapterName}}</a>
                         </td>
                         
                     </tr>
