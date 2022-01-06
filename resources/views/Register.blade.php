@@ -32,13 +32,23 @@
                                     <div class="form-group row">
                                         <label for="username" class="col-md-4 col-form-label text-md-right">UserName</label>
                                         <div class="col-md-6">
-                                            <input type="text" name="username" class="form-control rounded-top" id="username">
+                                            <input type="text" name="username" class="form-control rounded-top @error ('username') is-invalid @enderror" id="username">
+                                            @error ('username')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                              </div>
+                                              @enderror
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
                                         <div class="col-md-6">
-                                            <input type="email" name="email" class="form-control rounded-top" id="email" >
+                                            <input type="email" name="email" class="form-control rounded-top @error ('email') is-invalid @enderror" id="email" >
+                                            @error ('email')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                              </div>
+                                              @enderror
                                         </div>
                                     </div>
                                     <div class="form-group row">
