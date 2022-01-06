@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="style.css">
 <title> {{ $title }}</title>
 <header>
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center" style="margin-top: 100px">
         <h1>Web Owner</h1>
     </div>
 </header>

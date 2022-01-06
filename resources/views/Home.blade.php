@@ -26,4 +26,7 @@
         @endforeach
     </div>
     </body>
+    <div class="d-flex justify-content-center">
+        {{ $book->links() }}
+      </div>
 @endsection
