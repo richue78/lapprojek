@@ -20,6 +20,7 @@ class Bookdetail extends Migration
             $table->string('publisher',255);
             $table->integer('year')->index();
             $table->longText('Description');
+            $table->string('image',255);
             $table->foreign('bookID')->references('id')->on('books')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });

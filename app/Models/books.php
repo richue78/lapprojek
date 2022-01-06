@@ -14,4 +14,8 @@ class books extends Model
     public function chapterbooks(){
         return $this->hasMany(chapterBooks::class,'bookID','id');
     }
+    protected $fillable = [
+
+        'title'
+    ];
 }

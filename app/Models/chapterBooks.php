@@ -11,4 +11,11 @@ class chapterBooks extends Model
     public function books(){
         return $this->belongsTo(book::class,'bookID','id');
     }
+    protected $fillable=[
+        'bookID',
+        'ChapterName',
+        'storyChapter',
+        
+    ];
+
 }

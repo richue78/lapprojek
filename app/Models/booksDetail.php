@@ -11,4 +11,13 @@ class booksDetail extends Model
     public function books(){
         return $this->belongsTo(books::class,'bookID','id');
     }
+    protected $fillable=[
+        'bookID',
+        'Author',
+        'publisher',
+        'year',
+        'Description',
+        'image'
+    ];
+
 }

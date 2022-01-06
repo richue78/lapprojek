@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="style.css">
 <title>Home</title>
     <Header>
-        <Div class="d-flex  justify-content-center">
+        <Div class="d-flex justify-content-center" style="margin-bottom: 20px; margin-top: 80px">
             <H1>Welcome To LPirateNovel</H1>
         </Div>
     </Header>
@@ -15,13 +15,15 @@
         <div class="d-flex justify-content-evenly flex-wrap">
             @foreach ($book as $b)
             <div class="card mb-3" style="width: 18rem;">
+                <div class="card-img-top">
+                    <img src="image/{{ $b->details->image}}" class="card-img-top" alt="" >
+                </div>
             <div class="card-body">
               <h5 class="card-title">{{ $b ->title }}</h5>
               <a href="/detail/{{ $b->id }}" class="btn btn-primary">ReadNow</a>
             </div>
           </div>
-        @endforeach</div>
-        
-        
+        @endforeach
+    </div>
     </body>
 @endsection

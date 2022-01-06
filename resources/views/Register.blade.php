@@ -20,8 +20,14 @@
                                     <div class="form-group row">
                                         <label for="name" class="col-md-4 col-form-label text-md-right">Name</label>
                                         <div class="col-md-6">
-                                            <input type="text" name="name" class="form-control rounded-top " id="name" required autofocus>
+                                            <input type="text" name="name" class="form-control rounded-top @error ('name') is-invalid @enderror" id="name" required autofocus>
+                                            @error ('name')
+                                            <div class="invalid-feedback">
+                                                {{ $message }}
+                                              </div>
+                                              @enderror
                                         </div>
+
                                     </div>
                                     <div class="form-group row">
                                         <label for="username" class="col-md-4 col-form-label text-md-right">UserName</label>
@@ -35,7 +41,6 @@
                                             <input type="email" name="email" class="form-control rounded-top" id="email" >
                                         </div>
                                     </div>
-        
                                     <div class="form-group row">
                                         <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
                                         <div class="col-md-6">
