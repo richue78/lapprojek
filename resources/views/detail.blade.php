@@ -12,6 +12,9 @@
         <div class=" mt-5 col-8 ">
             <h3 class = "col-12 bg-primary text-white"> Book Detail</h3>
             @foreach ($details as $d)
+                <div class="" style="width: 10px">
+                  <img src="{{ url("image/{$d->image}") }}" alt="" style="width: 300px">
+                </div>
                   
                   <h5>Title:{{$d->books->title}}</h5>
                   <h5>Author:{{$d->Author}}</h5>

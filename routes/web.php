@@ -3,6 +3,7 @@
 use App\Http\Controllers\bookdetail;
 use App\Http\Controllers\chapterView;
 use App\Http\Controllers\Dashboard;
+use App\Http\Controllers\DashboardControl;
 use App\Http\Controllers\homeview;
 use App\Http\Controllers\LoginControler;
 use App\Http\Controllers\RegisterControler;
@@ -35,6 +36,7 @@ Route::get('/About', function () {
     ]);
 });
 
-
+Route::get('/EditUser',[DashboardControl::class,'edit']);
+Route::put('/UpdateUser',[DashboardControl::class,'update']);
 Route::get('/register',[RegisterControler::class,'index'])->middleware('guest');;
 Route::post('/register',[RegisterControler::class,'store']);

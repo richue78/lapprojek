@@ -12,6 +12,7 @@
         </Div>
     </Header>
     <body>
+        
         <div class="d-flex justify-content-evenly flex-wrap">
             @foreach ($book as $b)
             <div class="card mb-3" style="width: 18rem;">
@@ -26,7 +27,15 @@
         @endforeach
     </div>
     </body>
-    <div class="d-flex justify-content-center">
+    @if ($book->count())
+        <div class="d-flex justify-content-center">
         {{ $book->links() }}
       </div>
+    @else
+    <div class="text-center fs-4">
+        <H4>Books Not Found</H4>
+    </div>
+        
+    @endif
+    
 @endsection

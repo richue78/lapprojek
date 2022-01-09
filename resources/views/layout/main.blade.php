@@ -19,12 +19,18 @@
       <div class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav md-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <li class="nav-item">
-            <a class="nav-link text-white " aria-current="page" href="/">Home</a>
+            <a class="nav-link {{ Request::is('/') ? 'active text-white ' : ''}}" aria-current="page" href="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link  text-white " href="/About">About</a>
+            <a class="nav-link  {{ Request::is('About') ? ' active text-white' : ''}}" href="/About">About</a>
           </li>
-          
+          <div class="row justify-content-center">
+            <form action="/" >
+              <div class="ml-3 d-flex input-group">
+              <input class="form-control me-2" type="text" placeholder="Search..." aria-label="Search" name="search">
+              <button class="btn btn-outline-primary" type="submit" >Search</button>
+            </div>
+          </form>
         </ul>
       </div>
       <div class="collapse navbar-collapse" id="navbarScroll">
@@ -52,10 +58,10 @@
           @else
           
           <li class="nav-item">
-            <a class="nav-link text-white"  href="/login">Login</a>
+            <a class="nav-link  {{ Request::is('login') ? 'text-white active' : ''}}"  href="/login">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white "  href="/register">Register</a>
+            <a class="nav-link  {{ Request::is('register') ? 'text-white active' : ''}}"  href="/register">Register</a>
           </li>
           
           @endauth

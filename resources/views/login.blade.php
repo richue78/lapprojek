@@ -5,13 +5,13 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <title> {{ $title }}</title>
-<h1>login</h1>
+
 <link rel="stylesheet" href="style.css">
     <body>
         <main class="login-form">
             <div class="cotainer">
                 <div class="row justify-content-center">
-                    <div class="col-md-8">
+                    <div class="mt-5 col-md-8">
                         @if(session()->has('success'))
                         <div class="alert alert-primary alert-dismissible fade show" role="alert">
                            {{ session('success') }}

@@ -5,9 +5,9 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link rel="stylesheet" href="style.css">
-<title>Home</title>
+<title>chapterview</title>
     <Header>
-        <Div class="d-flex  justify-content-center">
+        <Div class="mt-5 d-flex  justify-content-center">
             @foreach ($view as $v)
                 <H1>{{$v->ChapterName}}</H1>
             @endforeach
