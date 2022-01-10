@@ -38,5 +38,5 @@ Route::get('/About', function () {
 
 Route::get('/EditUser',[DashboardControl::class,'edit']);
 Route::put('/UpdateUser',[DashboardControl::class,'update']);
-Route::get('/register',[RegisterControler::class,'index'])->middleware('guest');;
+Route::get('/register',[RegisterControler::class,'index'])->middleware('guest');
 Route::post('/register',[RegisterControler::class,'store']);
