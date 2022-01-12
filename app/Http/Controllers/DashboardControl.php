@@ -75,11 +75,15 @@ class DashboardControl extends Controller
             'name'=>['string','required','min:4','max:14'],
             'username'=>['string','required','min:3','max:14'],
             'email' => ['string','required','email'],
-
+            'profileImage'=>['image','file','max:5000']
            ]); 
         // $validatedData['id']=auth()->user()->id;
         // User::where('id',$user->id)
         // ->update($validatedData);
+        if($request->file('image')){
+            $validatedData['profileImage'] = $request->file('image')->store('profile_image');
+        }
+       
         auth()->user()->update($validatedData);
         return redirect('/')->with('success','Profile berhasil di update');
     }

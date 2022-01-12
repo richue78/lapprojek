@@ -15,7 +15,7 @@
                         <div class="card">
                             <div class="card-header">Edit Profile</div>
                             <div class="card-body">
-                                <form action="/UpdateUser" method="post">
+                                <form action="/UpdateUser" method="post" enctype="multipart/form-data">
                                     @method("put")
                                     @csrf
                                     <div class="form-group row">
@@ -52,6 +52,18 @@
                                               @enderror
                                         </div>
                                     </div>
+                                    <div class="form-group row">
+                                        <label for="image" class="col-md-4 col-form-label text-md-right">Profile Pictures</label>
+                                            <div class="col-md-6">
+                                                <input class="form-control rounded-top @error ('image') is-invalid @enderror" id="image" type="file" name="image">
+                                                @error ('email')
+                                                    <div class="invalid-feedback">
+                                                {{ $message }}
+                                              </div>
+                                              @enderror
+                                            </div>
+                                    </div>
+                                    
                                     <div class="col-md-6 offset-md-4">
                                         <button type="submit" class="btn btn-primary">
                                             Update
