@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[homeview::class,'index']);
 
-route::get('/detail/{id}',[bookdetail::class,'viewbook']);
+route::get('/detail/{id}',[bookdetail::class,'viewbook'])->middleware('auth');
 route::get('/chapterview/{id}',[chapterView::class,'viewchapter']);
 route::get('/dashboard',[Dashboard::class,'index'])->middleware('auth');
 Route::get('/login',[LoginControler::class,'index'])->name('login')->middleware('guest');
@@ -38,5 +38,5 @@ Route::get('/About', function () {
 
 Route::get('/EditUser',[DashboardControl::class,'edit']);
 Route::put('/UpdateUser',[DashboardControl::class,'update']);
-Route::get('/register',[RegisterControler::class,'index'])->middleware('guest');
+Route::get('/register',[RegisterControler::class,'index']);
 Route::post('/register',[RegisterControler::class,'store']);

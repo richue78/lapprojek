@@ -81,7 +81,7 @@ class DashboardControl extends Controller
         // User::where('id',$user->id)
         // ->update($validatedData);
         auth()->user()->update($validatedData);
-        return redirect('/')->with('success','Prifile berhasil di update');
+        return redirect('/')->with('success','Profile berhasil di update');
     }
 
     /**
