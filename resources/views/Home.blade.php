@@ -46,7 +46,7 @@
                       <h5 class="card-title">{{ $b ->title }}</h5>
                       <div class="d-flex justify-content-evenly">
                             <a href="/" class="btn btn-success">Upadate</a>
-                            <a href="/" class="btn btn-primary">ViewDetail</a>
+                            <a href="/detail/{{ $b->id }}" class="btn btn-primary">ViewDetail</a>
                             <a href="/" class="btn btn-danger">Delete</a>
                        </div>
                     </div>
@@ -55,7 +55,6 @@
                  </div>  
             </Div>
             @else
-            
             <div class="d-flex justify-content-evenly flex-wrap">
                 @foreach ($book as $b)
                 <div class="card mb-3" style="width: 18rem;">
@@ -71,7 +70,6 @@
              </div>  
             @endif
         @endauth
-      
     </body>
     @if ($book->count())
         <div class="d-flex justify-content-center">
@@ -81,7 +79,6 @@
         <div class="text-center fs-4">
             <H4>Books Not Found</H4>
         </div>
-        
     @endif
     
 @endsection

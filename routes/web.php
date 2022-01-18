@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[homeview::class,'index']);
 
-route::get('/detail/{id}',[bookdetail::class,'viewbook'])->middleware('auth');
+route::get('/detail/{id}',[bookdetail::class,'viewbook']);
 route::get('/chapterview/{id}',[chapterView::class,'viewchapter']);
 route::get('/dashboard',[Dashboard::class,'index'])->middleware('auth');
 Route::get('/login',[LoginControler::class,'index'])->name('login')->middleware('guest');
