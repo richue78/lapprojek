@@ -9,7 +9,7 @@
     <body>
         <main class="login-form">
             <div class="cotainer">
-                <div class="row justify-content-center">
+                <div class="mt-5 row justify-content-center">
                     <div class="col-md-8">
                         <div class="card">
                             <div class="card-header">Register</div>
