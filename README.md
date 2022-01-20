@@ -24,7 +24,15 @@ Trash website that you can read Free light novel.
 
 
 ## Linkyoutube
-    Link:
+    Link:https://youtu.be/KbTPIi9tO-s
 
+## AccTrial
+    Admin
+    email:admin@admin.com
+    pass:password
+
+    user
+    email:user@user.com
+    pass:qwerty12345
 
 
